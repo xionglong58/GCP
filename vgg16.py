@@ -2,7 +2,7 @@ import inspect
 import os
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import time
 
 VGG_MEAN = [103.939, 116.779, 123.68]
@@ -23,7 +23,6 @@ class Vgg16:
     def build(self, rgb):
         """
         load variable from npy to build the VGG
-
         :param rgb: rgb image [batch, height, width, 3] values scaled [0, 1]
         """
 
